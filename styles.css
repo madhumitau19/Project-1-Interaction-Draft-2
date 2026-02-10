@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+a{
+    color: rgb(32, 18, 7);
+    text-decoration: underline;
+}
+a:hover{
+    color: rgb(76, 37, 6);
+    text-decoration: none;
+}
+em{
+    font-style: italic;
+}
+
 @font-face {
     font-family: "Iowan BT";
     src: url("bitstream-iowan-old-style-bt-586c36a8d7712.ttf");
@@ -91,7 +103,6 @@ body {
     position: fixed;
     top: 30px;
     left: 30px;
-    text-transform: uppercase;
     display: none;
     z-index: 1998;
     overflow-y: scroll;
