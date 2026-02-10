@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Marlowe-Raleigh Dada</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="overlay"><img src="../Project-1-Interaction-Draft-2/05.jpg"></div>
+
+        <section id="entry">
+            <div id="entry-title">
+                <p></p>
+                <div id="entry-close"></div>
+            </div>
+            <div id="entry-content">
+                (tentative title)<br>
+                The Passionate Shepherd to His Love<br>
+                By Christopher Marlowe<br>
+                &<br>
+                The Nymph’s Reply to the Shepherd<br>
+                By Sir Walter Raleigh<br>    
+            </div>
+        </section>
+        <section id="about">
+            <div id="about-title">
+                <p>ABOUT</p>
+                <div id="about-close"></div>
+            </div>
+            <div id="about-content">
+                <p>This is an exercise in embracing randomness and creating something interesting with limited control, allowing chance to take over. It works similarly to Dada cut-out poetry or blackout poetry, where you use existing writing to create something new spontaneously. You can see the product as a unique piece of art, or a poem of your own, or whatever you please.</p>    
+                <br>
+                <p>The specific poems used are: The Passionate Shepherd to His Love by Christopher Marlowe and Sir Walter Raleigh’s response to it, The Nymph’s Reply to the Shepherd. The words from these poems will be used to create a random unique design. You can then print this design and draw connections between words to craft your own poem, as a third character of sorts in this interaction between Marlowe and Raleigh.</p>
+                <br>
+                <p>Instructions</p>
+                <br>
+                <ol>
+                    <li>Click this icon to open controls that will allow you to set font-size range, color/b&w, and whether you’d like rotation. These are the only aspects you can control.</li>
+                    <li>Set your preferred values in each field.</li>
+                    <li>Click on the “create” button, and watch as the words are arranged in a randomized, unique design.</li>
+                    <li>If you would like to reset the canvas to create a new design, select the “reset” button and then “create” again. You may also create a new design without clearing the canvas.</li>
+                    <li>When you like the design created, close both the about and control panel and either right-click → select “Print”, or Ctrl+P(Windows)/Command+P(Mac).<br>Note: on mobile, you can select the share icon → select Print</li>
+                    <li>Once you have printed the design, you can now create connections between the words to form your own poem in the same vein as Dada cut-out poetry. Note: The piece will look a little different in print than on screen.<br>Examples:</li>
+                </ol>
+            </div>
+        </section>
+        <section id="control">
+            <label for="min-font-size">Minimum Font Size: </label>
+            <input id="min-font-size" type="number" placeholder="12" min="10" max="50" value="12">
+            <label for="max-font-size">Maximum Font Size: </label>
+            <input id="max-font-size" type="number" placeholder="12" min="10" max="50" value="12">
+            <label for="rotation">Rotation?  </label>
+            <select id="rotation" name="Rotation?">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <label for="color">Color?  </label>
+            <select id="color" name="Color?">
+                <option value="color">Color</option>
+                <option value="monochrome">Monochrome</option>
+            </select>
+            
+            <div id="create-button"></div>
+            <div id="reset-button"></div>
+        </section>
+        <div id="about-icon"></div>
+        <div id="control-icon"></div>
+
+        <section id="texts">
+            <section id="marlowe">
+                <div id="167" class="word marlowe-word">Come</div>
+                <div id="168" class="word marlowe-word">live</div>
+                <div id="169" class="word marlowe-word">with</div>
+                <div id="170" class="word marlowe-word">me</div>
+                <div id="171" class="word marlowe-word">and</div>
+                <div id="172" class="word marlowe-word">be</div>
+                <div id="173" class="word marlowe-word">my</div>
+                <div id="174" class="word marlowe-word">love,</div>
+                <div id="175" class="word marlowe-word">And</div>
+                <div id="176" class="word marlowe-word">we</div>
+                <div id="177" class="word marlowe-word">will</div>
+                <div id="178" class="word marlowe-word">all</div>
+                <div id="179" class="word marlowe-word">the</div>
+                <div id="180" class="word marlowe-word">pleasures</div>
+                <div id="181" class="word marlowe-word">prove,</div>
+                <div id="182" class="word marlowe-word">That</div>
+                <div id="183" class="word marlowe-word">Valleys,</div>
+                <div id="184" class="word marlowe-word">groves,</div>
+                <div id="185" class="word marlowe-word">hills,</div>
+                <div id="186" class="word marlowe-word">and</div>
+                <div id="187" class="word marlowe-word">fields,</div>
+                <div id="188" class="word marlowe-word">Woods,</div>
+                <div id="189" class="word marlowe-word">or</div>
+                <div id="190" class="word marlowe-word">steepy</div>
+                <div id="191" class="word marlowe-word">mountain</div>
+                <div id="192" class="word marlowe-word">yields.</div>
+                <div id="193" class="word marlowe-word">And</div>
+                <div id="194" class="word marlowe-word">we</div>
+                <div id="195" class="word marlowe-word">will</div>
+                <div id="196" class="word marlowe-word">sit</div>
+                <div id="197" class="word marlowe-word">upon</div>
+                <div id="198" class="word marlowe-word">the</div>
+                <div id="199" class="word marlowe-word">Rocks,</div>
+                <div id="200" class="word marlowe-word">Seeing</div>
+                <div id="201" class="word marlowe-word">the</div>
+                <div id="202" class="word marlowe-word">Shepherds</div>
+                <div id="203" class="word marlowe-word">feed</div>
+                <div id="204" class="word marlowe-word">their</div>
+                <div id="205" class="word marlowe-word">flocks,</div>
+                <div id="206" class="word marlowe-word">By</div>
+                <div id="207" class="word marlowe-word">shallow</div>
+                <div id="208" class="word marlowe-word">Rivers</div>
+                <div id="209" class="word marlowe-word">to</div>
+                <div id="210" class="word marlowe-word">whose</div>
+                <div id="211" class="word marlowe-word">falls</div>
+                <div id="212" class="word marlowe-word">Melodious</div>
+                <div id="213" class="word marlowe-word">birds</div>
+                <div id="214" class="word marlowe-word">sing</div>
+                <div id="215" class="word marlowe-word">Madrigals.</div>
+                <div id="216" class="word marlowe-word">And</div>
+                <div id="217" class="word marlowe-word">I</div>
+                <div id="218" class="word marlowe-word">will</div>
+                <div id="219" class="word marlowe-word">make</div>
+                <div id="220" class="word marlowe-word">thee</div>
+                <div id="221" class="word marlowe-word">beds</div>
+                <div id="222" class="word marlowe-word">of</div>
+                <div id="223" class="word marlowe-word">Roses</div>
+                <div id="224" class="word marlowe-word">And</div>
+                <div id="225" class="word marlowe-word">a</div>
+                <div id="226" class="word marlowe-word">thousand</div>
+                <div id="227" class="word marlowe-word">fragrant</div>
+                <div id="228" class="word marlowe-word">posies,</div>
+                <div id="229" class="word marlowe-word">A</div>
+                <div id="230" class="word marlowe-word">cap</div>
+                <div id="231" class="word marlowe-word">of</div>
+                <div id="232" class="word marlowe-word">flowers,</div>
+                <div id="233" class="word marlowe-word">and</div>
+                <div id="234" class="word marlowe-word">a</div>
+                <div id="235" class="word marlowe-word">kirtle</div>
+                <div id="236" class="word marlowe-word">Embroidered</div>
+                <div id="237" class="word marlowe-word">all</div>
+                <div id="238" class="word marlowe-word">with</div>
+                <div id="239" class="word marlowe-word">leaves</div>
+                <div id="240" class="word marlowe-word">of</div>
+                <div id="241" class="word marlowe-word">Myrtle;</div>
+                <div id="242" class="word marlowe-word">A</div>
+                <div id="243" class="word marlowe-word">gown</div>
+                <div id="244" class="word marlowe-word">made</div>
+                <div id="245" class="word marlowe-word">of</div>
+                <div id="246" class="word marlowe-word">the</div>
+                <div id="247" class="word marlowe-word">finest</div>
+                <div id="248" class="word marlowe-word">wool</div>
+                <div id="249" class="word marlowe-word">Which</div>
+                <div id="250" class="word marlowe-word">from</div>
+                <div id="251" class="word marlowe-word">our</div>
+                <div id="252" class="word marlowe-word">pretty</div>
+                <div id="253" class="word marlowe-word">Lambs</div>
+                <div id="254" class="word marlowe-word">we</div>
+                <div id="255" class="word marlowe-word">pull;</div>
+                <div id="256" class="word marlowe-word">Fair</div>
+                <div id="257" class="word marlowe-word">lined</div>
+                <div id="258" class="word marlowe-word">slippers</div>
+                <div id="259" class="word marlowe-word">for</div>
+                <div id="260" class="word marlowe-word">the</div>
+                <div id="261" class="word marlowe-word">cold,</div>
+                <div id="262" class="word marlowe-word">With</div>
+                <div id="263" class="word marlowe-word">buckles</div>
+                <div id="264" class="word marlowe-word">of</div>
+                <div id="265" class="word marlowe-word">the</div>
+                <div id="266" class="word marlowe-word">purest</div>
+                <div id="267" class="word marlowe-word">gold;</div>
+                <div id="268" class="word marlowe-word">A</div>
+                <div id="269" class="word marlowe-word">belt</div>
+                <div id="270" class="word marlowe-word">of</div>
+                <div id="271" class="word marlowe-word">straw</div>
+                <div id="272" class="word marlowe-word">and</div>
+                <div id="273" class="word marlowe-word">Ivy</div>
+                <div id="274" class="word marlowe-word">buds,</div>
+                <div id="275" class="word marlowe-word">With</div>
+                <div id="276" class="word marlowe-word">Coral</div>
+                <div id="277" class="word marlowe-word">clasps</div>
+                <div id="278" class="word marlowe-word">and</div>
+                <div id="279" class="word marlowe-word">Amber</div>
+                <div id="280" class="word marlowe-word">studs:</div>
+                <div id="281" class="word marlowe-word">And</div>
+                <div id="282" class="word marlowe-word">if</div>
+                <div id="283" class="word marlowe-word">these</div>
+                <div id="284" class="word marlowe-word">pleasures</div>
+                <div id="285" class="word marlowe-word">may</div>
+                <div id="286" class="word marlowe-word">thee</div>
+                <div id="287" class="word marlowe-word">move,</div>
+                <div id="288" class="word marlowe-word">Come</div>
+                <div id="289" class="word marlowe-word">live</div>
+                <div id="290" class="word marlowe-word">with</div>
+                <div id="291" class="word marlowe-word">me,</div>
+                <div id="292" class="word marlowe-word">and</div>
+                <div id="293" class="word marlowe-word">be</div>
+                <div id="294" class="word marlowe-word">my</div>
+                <div id="295" class="word marlowe-word">love.</div>
+                <div id="296" class="word marlowe-word">The</div>
+                <div id="297" class="word marlowe-word">Shepherds'</div>
+                <div id="298" class="word marlowe-word">Swains</div>
+                <div id="299" class="word marlowe-word">shall</div>
+                <div id="300" class="word marlowe-word">dance</div>
+                <div id="301" class="word marlowe-word">and</div>
+                <div id="302" class="word marlowe-word">sing</div>
+                <div id="303" class="word marlowe-word">For</div>
+                <div id="304" class="word marlowe-word">thy</div>
+                <div id="305" class="word marlowe-word">delight</div>
+                <div id="306" class="word marlowe-word">each</div>
+                <div id="307" class="word marlowe-word">May-morning:</div>
+                <div id="308" class="word marlowe-word">If</div>
+                <div id="309" class="word marlowe-word">these</div>
+                <div id="310" class="word marlowe-word">delights</div>
+                <div id="311" class="word marlowe-word">thy</div>
+                <div id="312" class="word marlowe-word">mind</div>
+                <div id="313" class="word marlowe-word">may</div>
+                <div id="314" class="word marlowe-word">move,</div>
+                <div id="315" class="word marlowe-word">Then</div>
+                <div id="316" class="word marlowe-word">live</div>
+                <div id="317" class="word marlowe-word">with</div>
+                <div id="318" class="word marlowe-word">me,</div>
+                <div id="319" class="word marlowe-word">and</div>
+                <div id="320" class="word marlowe-word">be</div>
+                <div id="321" class="word marlowe-word">my</div>
+                <div id="322" class="word marlowe-word">love.</div>
+            </section>
+            <section id="raleigh">
+                <div class="word" id="1">If</div>
+                <div class="word" id="2">all</div>
+                <div class="word" id="3">the</div>
+                <div class="word" id="4">world</div>
+                <div class="word" id="5">and</div>
+                <div class="word" id="6">love</div>
+                <div class="word" id="7">were</div>
+                <div class="word" id="8">young,</div>
+                <div class="word" id="9">And</div>
+                <div class="word" id="10">truth</div>
+                <div class="word" id="11">in</div>
+                <div class="word" id="12">every</div>
+                <div class="word" id="13">Shepherd's</div>
+                <div class="word" id="14">tongue,</div>
+                <div class="word" id="15">These</div>
+                <div class="word" id="16">pretty</div>
+                <div class="word" id="17">pleasures</div>
+                <div class="word" id="18">might</div>
+                <div class="word" id="19">me</div>
+                <div class="word" id="20">move,</div>
+                <div class="word" id="21">To</div>
+                <div class="word" id="22">live</div>
+                <div class="word" id="23">with</div>
+                <div class="word" id="24">thee,</div>
+                <div class="word" id="25">and</div>
+                <div class="word" id="26">be</div>
+                <div class="word" id="27">thy</div>
+                <div class="word" id="28">love.</div>
+                <div class="word" id="29">Time</div>
+                <div class="word" id="30">drives</div>
+                <div class="word" id="31">the</div>
+                <div class="word" id="32">flocks</div>
+                <div class="word" id="33">from</div>
+                <div class="word" id="34">field</div>
+                <div class="word" id="35">to</div>
+                <div class="word" id="36">fold,</div>
+                <div class="word" id="37">When</div>
+                <div class="word" id="38">Rivers</div>
+                <div class="word" id="39">rage</div>
+                <div class="word" id="40">and</div>
+                <div class="word" id="41">Rocks</div>
+                <div class="word" id="42">grow</div>
+                <div class="word" id="43">cold,</div>
+                <div class="word" id="44">And</div>
+                <div class="word" id="45">Philomel</div>
+                <div class="word" id="46">becometh</div>
+                <div class="word" id="47">dumb,</div>
+                <div class="word" id="48">The</div>
+                <div class="word" id="49">rest</div>
+                <div class="word" id="50">complains</div>
+                <div class="word" id="51">of</div>
+                <div class="word" id="52">cares</div>
+                <div class="word" id="53">to</div>
+                <div class="word" id="54">come.</div>
+                <div class="word" id="55">The</div>
+                <div class="word" id="56">flowers</div>
+                <div class="word" id="57">do</div>
+                <div class="word" id="58">fade,</div>
+                <div class="word" id="59">and</div>
+                <div class="word" id="60">wanton</div>
+                <div class="word" id="61">fields,</div>
+                <div class="word" id="62">To</div>
+                <div class="word" id="63">wayward</div>
+                <div class="word" id="64">winter</div>
+                <div class="word" id="65">reckoning</div>
+                <div class="word" id="66">yields,</div>
+                <div class="word" id="67">A</div>
+                <div class="word" id="68">honey</div>
+                <div class="word" id="69">tongue,</div>
+                <div class="word" id="70">a</div>
+                <div class="word" id="71">heart</div>
+                <div class="word" id="72">of</div>
+                <div class="word" id="73">gall,</div>
+                <div class="word" id="74">Is</div>
+                <div class="word" id="75">fancy's</div>
+                <div class="word" id="76">spring,</div>
+                <div class="word" id="77">but</div>
+                <div class="word" id="78">sorrow's</div>
+                <div class="word" id="79">fall.</div>
+                <div class="word" id="80">Thy</div>
+                <div class="word" id="81">gowns,</div>
+                <div class="word" id="82">thy</div>
+                <div class="word" id="83">shoes,</div>
+                <div class="word" id="84">thy</div>
+                <div class="word" id="85">beds</div>
+                <div class="word" id="86">of</div>
+                <div class="word" id="87">Roses,</div>
+                <div class="word" id="88">Thy</div>
+                <div class="word" id="89">cap,</div>
+                <div class="word" id="90">thy</div>
+                <div class="word" id="91">kirtle,</div>
+                <div class="word" id="92">and</div>
+                <div class="word" id="93">thy</div>
+                <div class="word" id="94">posies</div>
+                <div class="word" id="95">Soon</div>
+                <div class="word" id="96">break,</div>
+                <div class="word" id="97">soon</div>
+                <div class="word" id="98">wither,</div>
+                <div class="word" id="99">soon</div>
+                <div class="word" id="100">forgotten:</div>
+                <div class="word" id="101">In</div>
+                <div class="word" id="102">folly</div>
+                <div class="word" id="103">ripe,</div>
+                <div class="word" id="104">in</div>
+                <div class="word" id="105">reason</div>
+                <div class="word" id="106">rotten.</div>
+                <div class="word" id="107">Thy</div>
+                <div class="word" id="108">belt</div>
+                <div class="word" id="109">of</div>
+                <div class="word" id="110">straw</div>
+                <div class="word" id="111">and</div>
+                <div class="word" id="112">Ivy</div>
+                <div class="word" id="113">buds,</div>
+                <div class="word" id="114">The</div>
+                <div class="word" id="115">Coral</div>
+                <div class="word" id="116">clasps</div>
+                <div class="word" id="117">and</div>
+                <div class="word" id="118">amber</div>
+                <div class="word" id="119">studs,</div>
+                <div class="word" id="120">All</div>
+                <div class="word" id="121">these</div>
+                <div class="word" id="122">in</div>
+                <div class="word" id="123">me</div>
+                <div class="word" id="124">no</div>
+                <div class="word" id="125">means</div>
+                <div class="word" id="126">can</div>
+                <div class="word" id="127">move</div>
+                <div class="word" id="128">To</div>
+                <div class="word" id="129">come</div>
+                <div class="word" id="130">to</div>
+                <div class="word" id="131">thee</div>
+                <div class="word" id="132">and</div>
+                <div class="word" id="133">be</div>
+                <div class="word" id="134">thy</div>
+                <div class="word" id="135">love.</div>
+                <div class="word" id="136">But</div>
+                <div class="word" id="137">could</div>
+                <div class="word" id="138">youth</div>
+                <div class="word" id="139">last,</div>
+                <div class="word" id="140">and</div>
+                <div class="word" id="141">love</div>
+                <div class="word" id="142">still</div>
+                <div class="word" id="143">breed,</div>
+                <div class="word" id="144">Had</div>
+                <div class="word" id="145">joys</div>
+                <div class="word" id="146">no</div>
+                <div class="word" id="147">date,</div>
+                <div class="word" id="148">nor</div>
+                <div class="word" id="149">age</div>
+                <div class="word" id="150">no</div>
+                <div class="word" id="151">need,</div>
+                <div class="word" id="152">Then</div>
+                <div class="word" id="153">these</div>
+                <div class="word" id="154">delights</div>
+                <div class="word" id="155">my</div>
+                <div class="word" id="156">mind</div>
+                <div class="word" id="157">might</div>
+                <div class="word" id="158">move</div>
+                <div class="word" id="159">To</div>
+                <div class="word" id="160">live</div>
+                <div class="word" id="161">with</div>
+                <div class="word" id="162">thee,</div>
+                <div class="word" id="163">and</div>
+                <div class="word" id="164">be</div>
+                <div class="word" id="165">thy</div>
+                <div class="word" id="166">love.</div>
+            </section>
+        </section>
+
+        <section id="loading">CREATING...</section>
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>
