@@ -166,17 +166,36 @@ let createButton= document.getElementById('create-button');
 // createButton.addEventListener("click", setPositions);
 
 function create() {
-    loading.innerHTML = "CREATING...";
-    loading.style.display = "flex";
-    setColor();
-    setTransition();
-    setFontSize();
-    checkForRotation();
-    setPositions();
-    setTimeout(() => {
-        loading.innerHTML = "COMPLETED!"}, 32200);
-    setTimeout(() => {
-        loading.style.display = "none"}, 35200);
+    let fontSizeMax = Number(document.getElementById("max-font-size").value);
+    let fontSizeMin = Number(document.getElementById("min-font-size").value);
+    if (fontSizeMax < fontSizeMin) {
+        let id = 1;
+        let color= 0;
+        while (id < 323) {
+            let target= document.getElementById(`${id}`);
+            target.style.color= `hsl(${color} 30% 30%)`;
+            color += 5;
+            id++;
+            }
+        words.forEach(word => {
+                word.style.transform = 'rotate(0deg)';
+                word.style.fontSize = '20px';
+            });
+        setTransition();
+        easterEgg();
+    } else {
+        loading.innerHTML = "CREATING...";
+        loading.style.display = "flex";
+        setColor();
+        setTransition();
+        setFontSize();
+        checkForRotation();
+        setPositions();
+        setTimeout(() => {
+            loading.innerHTML = "COMPLETED!"}, 32200);
+        setTimeout(() => {
+            loading.style.display = "none"}, 35200);
+        }
 };
 
 
@@ -191,6 +210,8 @@ resetButton.addEventListener("click", () => {
   });
   loading.style.display = "none";
 });
+
+//easter egg bruh
 
 function easterEgg() {
     let t=0;
@@ -216,25 +237,46 @@ function easterEgg() {
   );
 }
 
-document.addEventListener("keypress", function(event){
+// document.addEventListener("keypress", function(event){
 
-   if (event.key === 'l') {
-    let id = 1;
-    let color= 0;
-    while (id < 323) {
-        let target= document.getElementById(`${id}`);
-        target.style.color= `hsl(${color} 30% 30%)`;
-        color += 5;
-        id++;
-        }
-    words.forEach(word => {
-            word.style.transform = 'rotate(0deg)';
-            word.style.fontSize = '20px';
-        });
-    setTransition();
-    easterEgg();
-   }
-})
+//    if (event.key === 'l') {
+//     let id = 1;
+//     let color= 0;
+//     while (id < 323) {
+//         let target= document.getElementById(`${id}`);
+//         target.style.color= `hsl(${color} 30% 30%)`;
+//         color += 5;
+//         id++;
+//         }
+//     words.forEach(word => {
+//             word.style.transform = 'rotate(0deg)';
+//             word.style.fontSize = '20px';
+//         });
+//     setTransition();
+//     easterEgg();
+//    }
+// })
+
+// let fontSizeMax = Number(document.getElementById("max-font-size").value);
+// let fontSizeMin = Number(document.getElementById("min-font-size").value);
+// if (fontSizeMax < fontSizeMin) {
+//     let id = 1;
+//     let color= 0;
+//     while (id < 323) {
+//         let target= document.getElementById(`${id}`);
+//         target.style.color= `hsl(${color} 30% 30%)`;
+//         color += 5;
+//         id++;
+//         }
+//     words.forEach(word => {
+//             word.style.transform = 'rotate(0deg)';
+//             word.style.fontSize = '20px';
+//         });
+//     setTransition();
+//     easterEgg();
+//    };
 
 
-
+function playEasterEgg() {
+    
+}
