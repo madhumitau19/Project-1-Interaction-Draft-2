@@ -8,16 +8,15 @@ let about = document.getElementById("about");
 let aboutIcon = document.getElementById("about-icon");
 let aboutClose = document.getElementById("about-close");
 aboutIcon.addEventListener("click", () => {
-    about.style.display = "block";
-})
-aboutClose.addEventListener("click", () => {
-    about.style.display = "none";
+    about.classList.toggle("show");
+    aboutIcon.classList.toggle("opened");
 })
 
 let control = document.getElementById("control");
 let controlIcon = document.getElementById("control-icon");
 controlIcon.addEventListener("click", () => {
     control.classList.toggle("show");
+    controlIcon.classList.toggle("opened");
 })
 
 
