@@ -11,7 +11,7 @@
     <body>
         <div id="overlay"><img src="../Project-1-Interaction-Draft-2/05.jpg"></div>
 
-        <section id="entry">
+        <!-- <section id="entry">
             <div id="entry-close">
                 <img src="../Project-1-Interaction-Draft-2/CloseIcon.png">
             </div>
@@ -23,60 +23,86 @@
                 The Nymph’s Reply to the Shepherd<br>
                 By Sir Walter Raleigh<br>    
             </div>
-        </section>
+        </section> -->
         <section id="about">
-            <div id="about-title">
+            <!-- <div id="about-title">
                 <p>ABOUT</p>
-                <!-- <div id="about-close">
+                    <div id="about-close">
                     <img src="../Project-1-Interaction-Draft-2/CloseIcon.png">
-                </div> -->
+                </div>
+            </div> -->
+            <ol>
+                <li>Select a font size range, color/monochrome, and whether you’d like rotation.</li>
+                <li>Click the quill-shaped Create button, and watch your design form. (Select the Reset button to clear canvas. You can also create a new design without clearing.)</li>
+                <li>Hit the Print button!</li>
+                <li>You can now use your printed design to create connections between the words to form your own poem. <em><br>Note: The piece will look a little different in print than on screen.</em></li>
+            </ol>
+
+            <div id="learn-more">What is this project?</div>
+        </section>
+
+        <section id="description">
+            <div id="close-description">
+                <img src="../Project-1-Interaction-Draft-2/CloseIcon.png">
             </div>
-            <div id="about-content">
-                <p>This is an exercise in embracing randomness and creating something interesting with limited control, allowing chance to take over. It works similarly to Dada <a href="https://en.wikipedia.org/wiki/Cut-up_technique" target="_blank">cut-out poetry</a> or <a href="https://en.wikipedia.org/wiki/Blackout_poetry" target="_blank">blackout poetry,</a> where you use existing writing to create something new spontaneously. You can see the product as a unique piece of art, or a poem of your own, or whatever you please.</p>    
+            <div id="description-content">
+                <p>This is an exercise in embracing randomness and creating something interesting with limited control, allowing chance to take over. It works similarly to Dada <a href=”https://en.wikipedia.org/wiki/Cut-up_technique”>cut-out poetry</a> or <a href=”https://en.wikipedia.org/wiki/Blackout_poetry”>blackout poetry,</a> where you use existing writing to create something new spontaneously. You can see the product as a unique piece of art, or a poem of your own, or whatever you please.    
                 <br>
-                <p>The specific poems used are: <em><a href="https://www.poetryfoundation.org/poems/44675/the-passionate-shepherd-to-his-love" target="_blank">The Passionate Shepherd to His Love</a></em> by Christopher Marlowe and Sir Walter Raleigh’s response to it, <em><a href="https://www.poetryfoundation.org/poems/44939/the-nymphs-reply-to-the-shepherd" target="_blank">The Nymph’s Reply to the Shepherd.</a></em> The words from these poems will be used to create a random unique design. You can then print this design and draw connections between words to craft your own poem, as a third character of sorts in this interaction between Marlowe and Raleigh.</p>
                 <br>
-                <p>Instructions</p>
-                <br>
-                <ol>
-                    <li>Click the icon at the bottom-right to open controls that will allow you to set font-size range, color/monochrome, and whether you’d like rotation. These are the only aspects you can control.</li>
-                    <li>Set your preferred values in each field.</li>
-                    <li>Click on the quill-shaped Create button, and watch as the words are arranged in a randomized, unique design.</li>
-                    <li>If you would like to reset the canvas to create a new design, select the Reset button and then Create again. You can also create a new design without clearing the canvas.</li>
-                    <li>When you like the design created, close both the About and Control panel. Then either right-click → select “Print”, or Ctrl+P(Windows)/Command+P(Mac).<br>    <em>Note: on mobile, you can select the Share icon → select "Print"</em></li>
-                    <li>Once you have printed the design, you can now create connections between the words to form your own poem in the same vein as Dada cut-out poetry. <em><br>Note: The piece will look a little different in print than on screen.</em><br><br>Examples:</li>
-                </ol>
+                The specific poems used are: <em><a href=”https://www.poetryfoundation.org/poems/44675/the-passionate-shepherd-to-his-love”>The Passionate Shepherd to His Love</a></em> by Christopher Marlowe and Sir Walter Raleigh’s response to it,  <em><a href=”https://www.poetryfoundation.org/poems/44939/the-nymphs-reply-to-the-shepherd”>The Nymph’s Reply to the Shepherd.</a></em> The words from these poems will be used to create a random unique design. You can then print this design and draw connections between words to craft your own poem, as a third character of sorts in this interaction between Marlowe and Raleigh.</p>
             </div>
         </section>
+        
+
         <section id="control">
+
             <label for="min-font-size">Minimum Font Size: </label>
-            <input id="min-font-size" type="number" placeholder="12" min="10" max="50" value="12">
+            <input id="min-font-size" type="range" placeholder="12" min="10" max="200" value="12">
+            <div id="min-font-size-display"></div>
+
+            <br>
             <label for="max-font-size">Maximum Font Size: </label>
-            <input id="max-font-size" type="number" placeholder="12" min="10" max="50" value="12">
-            <label for="rotation">Rotation?  </label>
+            <input id="max-font-size" type="range" placeholder="12" min="10" max="200" value="12">
+            <div id="max-font-size-display"></div>
+
+            <br>
+            <!-- <label for="rotation">Rotation?  </label>
             <select id="rotation" name="Rotation?">
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
-            </select>
-            <label for="color">Color?  </label>
+            </select> -->
+            <p id="rotation-label">Rotation?</p>
+            <label class="toggle">
+                <input type="checkbox" id="rotation" name="rotation">
+                <span class="toggle-slider"></span>
+            </label>
+
+            <br>
+            <!-- <label for="color">Color?  </label>
             <select id="color" name="Color?">
                 <option value="color">Color</option>
                 <option value="monochrome">Monochrome</option>
-            </select>
-            
-            <div id="create-button">
-                <img src="../Project-1-Interaction-Draft-2/CreateIcon.png">
-            </div>
-            <div id="reset-button">
-                <img src="../Project-1-Interaction-Draft-2/ResetIcon.png">
+            </select> -->
+            <p id="color-label">Color?</p>
+            <label class="toggle">
+                <input type="checkbox" id="color" name="color">
+                <span class="toggle-slider"></span>
+            </label>
+
+            <div id="control-buttons">
+                <div id="create-button">
+                    <img src="../Project-1-Interaction-Draft-2/CreateIcon.png">
+                </div>
+                <div id="reset-button">
+                    <img src="../Project-1-Interaction-Draft-2/ResetIcon.png">
+                </div>
+                <div id="print-button">
+                    <img src="../Project-1-Interaction-Draft-2/PrintIcon.png">
+                </div>
             </div>
         </section>
-        <div id="about-icon">
-            <img src="../Project-1-Interaction-Draft-2/ManIcon.png">
-        </div>
-        <div id="control-icon">
-            <img src="../Project-1-Interaction-Draft-2/WomanIcon.png">
-        </div>
+        <div id="about-icon"></div>
+        <div id="control-icon"></div>
 
         <section id="texts">
             <section id="marlowe">

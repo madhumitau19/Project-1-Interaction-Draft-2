@@ -1,26 +1,35 @@
-let entryClose = document.getElementById("entry-close");
-let entry = document.getElementById("entry");
-entryClose.addEventListener("click", () => {
-    entry.style.display = "none";
-});
+// let entryClose = document.getElementById("entry-close");
+// let entry = document.getElementById("entry");
+// entryClose.addEventListener("click", () => {
+//     entry.style.display = "none";
+// });
 
 let about = document.getElementById("about");
 let aboutIcon = document.getElementById("about-icon");
-let aboutClose = document.getElementById("about-close");
 aboutIcon.addEventListener("click", () => {
-    about.classList.toggle("show");
-    aboutIcon.classList.toggle("opened");
-})
+    about.classList.toggle("hide");
+    aboutIcon.classList.toggle("closed");
+});
 
 let control = document.getElementById("control");
 let controlIcon = document.getElementById("control-icon");
 controlIcon.addEventListener("click", () => {
-    control.classList.toggle("show");
-    controlIcon.classList.toggle("opened");
-})
+    control.classList.toggle("hide");
+    controlIcon.classList.toggle("closed");
+});
+
+let learnMore = document.getElementById("learn-more");
+let descriptionClose = document.getElementById("close-description");
+let description = document.getElementById("description");
+learnMore.addEventListener("click", () => {
+    description.classList.add("show");
+});
+descriptionClose.addEventListener("click", () => {
+    description.classList.remove("show");
+});
 
 
-//Poem into design]
+//Poem into design
 
 const words = document.querySelectorAll(".word");
 const positions = [];
@@ -30,6 +39,18 @@ function getRandomNum(min, max){
   max = Math.floor(max); 
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+let minFontSize = document.getElementById("min-font-size");
+document.getElementById("min-font-size-display").innerHTML = `${minFontSize.value}`;
+minFontSize.addEventListener("input", () => {
+  document.getElementById("min-font-size-display").innerHTML = `${minFontSize.value}`;
+});
+
+let maxFontSize = document.getElementById("max-font-size");
+document.getElementById("max-font-size-display").innerHTML = `${maxFontSize.value}`;
+maxFontSize.addEventListener("input", () => {
+  document.getElementById("max-font-size-display").innerHTML = `${maxFontSize.value}`;
+});
 
 function setFontSize(){
     let fontSizeMax = Number(document.getElementById("max-font-size").value);
@@ -100,8 +121,8 @@ function setRotation(){
 };
 
 function checkForRotation(){
-    let rotation = document.getElementById("rotation").value;
-    if (rotation === "Yes") {
+    let rotation = document.getElementById("rotation");
+    if (rotation.checked) {
         setRotation();
     } else {
         words.forEach(word => {
@@ -118,7 +139,7 @@ function setTransition(){
   words.forEach(word => {
   
     word.style.transitionDelay = `${i}s`;
-  i += 0.1;
+  i += 0.02;
   });
 };
 
@@ -126,8 +147,8 @@ function setColor() {
     const marloweWord = document.querySelectorAll(".marlowe-word");
     let id = 1;
     let color= 0;
-    let colorPref = document.getElementById("color").value;
-    if (colorPref === "color"){
+    let colorPref = document.getElementById("color");
+    if (colorPref.checked){
         while (id < 323) {
         let target= document.getElementById(`${id}`);
         target.style.color= `hsl(${color} 30% 30%)`;
@@ -157,15 +178,11 @@ let loading = document.getElementById("loading");
 
 let createButton= document.getElementById('create-button');
 
-// createButton.addEventListener("click", setColor);
-// createButton.addEventListener("click", setTransition);
-// createButton.addEventListener("click", setFontSize);
-// // createButton.addEventListener("click", setTopVal);
-// // createButton.addEventListener("click", setLeftVal);
-// createButton.addEventListener("click", checkForRotation);
-// createButton.addEventListener("click", setPositions);
-
 function create() {
+    if (getComputedStyle(about).display === "block"){
+        about.classList.add("hide");
+        aboutIcon.classList.add("closed");
+    };
     let fontSizeMax = Number(document.getElementById("max-font-size").value);
     let fontSizeMin = Number(document.getElementById("min-font-size").value);
     if (fontSizeMax < fontSizeMin) {
@@ -192,9 +209,9 @@ function create() {
         checkForRotation();
         setPositions();
         setTimeout(() => {
-            loading.innerHTML = "COMPLETED!"}, 32200);
+            loading.innerHTML = "COMPLETED!"}, 6540);
         setTimeout(() => {
-            loading.style.display = "none"}, 35200);
+            loading.style.display = "none"}, 7540);
         }
 };
 
@@ -211,14 +228,23 @@ resetButton.addEventListener("click", () => {
   loading.style.display = "none";
 });
 
+let printButton= document.getElementById("print-button");
+printButton.addEventListener("click", () => {
+    window.print();
+});
+
 //easter egg bruh
 
 function easterEgg() {
+    if (getComputedStyle(control).display === "block"){
+        control.classList.add("hide");
+        controlIcon.classList.add("closed");
+    };
     let t=0;
     let l=0;
     let direction = 1;
     words.forEach(word => {
-        word.style.top = `calc(30px + ${t}%)`;
+        word.style.top = `calc(100px + ${t}%)`;
         word.style.left = `calc(30px + ${l}%)`;
         word.style.opacity = 1;
 
@@ -235,48 +261,4 @@ function easterEgg() {
             }
         }
   );
-}
-
-// document.addEventListener("keypress", function(event){
-
-//    if (event.key === 'l') {
-//     let id = 1;
-//     let color= 0;
-//     while (id < 323) {
-//         let target= document.getElementById(`${id}`);
-//         target.style.color= `hsl(${color} 30% 30%)`;
-//         color += 5;
-//         id++;
-//         }
-//     words.forEach(word => {
-//             word.style.transform = 'rotate(0deg)';
-//             word.style.fontSize = '20px';
-//         });
-//     setTransition();
-//     easterEgg();
-//    }
-// })
-
-// let fontSizeMax = Number(document.getElementById("max-font-size").value);
-// let fontSizeMin = Number(document.getElementById("min-font-size").value);
-// if (fontSizeMax < fontSizeMin) {
-//     let id = 1;
-//     let color= 0;
-//     while (id < 323) {
-//         let target= document.getElementById(`${id}`);
-//         target.style.color= `hsl(${color} 30% 30%)`;
-//         color += 5;
-//         id++;
-//         }
-//     words.forEach(word => {
-//             word.style.transform = 'rotate(0deg)';
-//             word.style.fontSize = '20px';
-//         });
-//     setTransition();
-//     easterEgg();
-//    };
-
-
-function playEasterEgg() {
-    
 }
