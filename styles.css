@@ -3,10 +3,20 @@
     padding: none;
     box-sizing: border-box;
 }
-
 @media print{
     #about, #control, #about-icon, #control-icon{
         display: none !important;
+    }
+     @page {
+        size: letter;
+        margin: 0;
+    }
+    #raleigh, #marlowe {
+        width: 8.5in;
+        height: 11in;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
 
@@ -297,6 +307,10 @@ input:checked ~ .toggle-slider:before {
     margin-left: -10px;
 }
 
+#texts{
+    overflow: clip;
+}
+
 .word{
   position: absolute;
   opacity: 0;
@@ -321,4 +335,149 @@ input:checked ~ .toggle-slider:before {
     z-index: 1999;
     top: 70px;
     left: 70PX; 
+}
+
+/* mobile */
+
+@media screen and (max-width: 431px) {
+    html{
+        overflow: hidden;
+    }
+    body{
+        overflow: hidden;
+    }
+
+    #about-icon{
+        position: fixed;
+        top: auto;
+        left: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+    #about-icon:hover{
+        /* transform: rotate(180deg); */
+        transform: scale(110%);
+    }
+    #about-icon.closed{
+        background-image: url(../Project-1-Interaction-Draft-2/HelpIcon.png);
+    }
+    #about{
+        border-radius: 30px 30px 5px 30px;
+        width: calc(100vw - 90px);
+        height: 45vh;
+        max-height: 50vh;
+        position: fixed;
+        top: auto;
+        left: auto;
+        right: 70px;
+        bottom: 20px;
+        font-size: 18px;
+    }
+    #about ol{
+        margin: 30px 30px 30px 10px;
+    }
+    #about.hide{
+        display: none !important;
+    }
+    #learn-more{
+        margin: 0;
+        width: 200px;
+        transform: rotate(90deg);
+        position: fixed;
+        right: -60px;
+        bottom: 150px;
+    }
+    #learn-more:hover{
+        transform: scale(90%);
+    }
+
+    #description{
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        display: none; 
+        z-index: 1999;
+    }
+    #description.show{
+        display: flex;
+    }
+    #description-content{
+        width: fit-content;
+        max-width: 700px;
+        height: fit-content;
+        max-height: 530px;
+        overflow-y: scroll;
+        border: solid 1px rgb(32, 18, 7);
+        background-color: rgb(179, 149, 111);
+        padding: 30px;
+        font-size: 20px;
+        border-radius: 5px 30px 30px 30px;
+    }
+    #close-description{
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+        cursor: pointer;
+        z-index: 1999;
+        transition: transform 0.3s ease-in-out;
+        transform: rotate(0deg);
+        background-color: #a95530;
+        border: solid 1px rgb(32, 18, 7);
+        border-radius: 5px 5px 5px 5px;
+        display: flex;
+        align-items: center;
+    }
+    #close-description img{
+        max-width: 100%;
+    }
+    #close-description:hover{
+        /* transform: rotate(0deg); */
+        transform: scale(110%);
+    }
+
+    #control-icon{
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    #control{
+        width: calc(100vw - 90px);
+        height: calc(50vh - 20px);
+        max-height: 50vh;
+        top: 20px;
+        right: 70px;
+        padding: 30px;
+        font-size: 16px;
+    }
+    #min-font-size-display, #max-font-size-display{
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+    #min-font-size::-webkit-slider-thumb, #max-font-size::-webkit-slider-thumb {
+        width: 14px;
+        height: 14px;
+    }
+    .toggle{
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
+    #rotation-label, #color-label{
+        margin-bottom: 5px;
+    }
+
+    #control-buttons{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    #create-button, #reset-button, #print-button{
+        width: 40%;
+        aspect-ratio: 1/1;
+        margin-left: -10px;
+    }
+    #reset-button{
+        margin-right: 10px
+    }
+
 }

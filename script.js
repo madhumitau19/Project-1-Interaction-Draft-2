@@ -70,8 +70,45 @@ function checkOverlap(rect1, rect2, padding = 20) {
            rect1.top > rect2.bottom + padding);
 }
 
+// function setPositions() {
+//   positions.length = 0; // Clear previous positions
+  
+//   words.forEach(word => {
+//     let placed = false;
+//     let attempts = 0;
+//     const maxAttempts = 100;
+    
+//     while (!placed && attempts < maxAttempts) {
+//         const wordWidth = word.offsetWidth;
+//         const wordHeight = word.offsetHeight;
+
+//         const maxLeft = window.innerWidth - wordWidth;
+//         const maxTop = window.innerHeight - wordHeight;
+
+//         let top = getRandomNum(0, maxTop);
+//         let left = getRandomNum(0, maxLeft);
+        
+//         word.style.top = `${top}px`;
+//         word.style.left = `${left}px`;
+//         word.style.opacity = 1;
+        
+//         const rect = word.getBoundingClientRect();
+        
+//         // Check if overlaps with any existing word
+//         const overlaps = positions.some(pos => checkOverlap(rect, pos));
+        
+//         if (!overlaps || attempts === maxAttempts - 1) {
+//             positions.push(rect);
+//             placed = true;
+//         }
+        
+//         attempts++;
+//         }
+//     });
+// }
+
 function setPositions() {
-  positions.length = 0; // Clear previous positions
+  positions.length = 0;
   
   words.forEach(word => {
     let placed = false;
@@ -79,16 +116,32 @@ function setPositions() {
     const maxAttempts = 100;
     
     while (!placed && attempts < maxAttempts) {
-      let top = getRandomNum(0, 90);
-      let left = getRandomNum(0, 85);
+      const wordWidth = (word.offsetWidth / window.innerWidth) * 100;
+      const wordHeight = (word.offsetHeight / window.innerHeight) * 100;
+
+      const maxLeft = Math.max(0, 100 - wordWidth);
+      const maxTop = Math.max(0, 100 - wordHeight);
+
+      let top = getRandomNum(0, maxTop);
+      let left = getRandomNum(0, maxLeft);
       
       word.style.top = `${top}%`;
       word.style.left = `${left}%`;
+
+      // Force clamp on mobile
+      if (window.innerWidth <= 431) {
+        const rect = word.getBoundingClientRect();
+        if (rect.right > window.innerWidth) {
+            word.style.left = `${window.innerWidth - rect.width}px`;
+        }
+        if (rect.bottom > window.innerHeight) {
+            word.style.top = `${window.innerHeight - rect.height}px`;
+        }
+      }
+
       word.style.opacity = 1;
       
       const rect = word.getBoundingClientRect();
-      
-      // Check if overlaps with any existing word
       const overlaps = positions.some(pos => checkOverlap(rect, pos));
       
       if (!overlaps || attempts === maxAttempts - 1) {
@@ -182,6 +235,9 @@ function create() {
     if (getComputedStyle(about).display === "block"){
         about.classList.add("hide");
         aboutIcon.classList.add("closed");
+    };
+    if (getComputedStyle(description).display === "flex") {
+        description.classList.remove("show");
     };
     let fontSizeMax = Number(document.getElementById("max-font-size").value);
     let fontSizeMin = Number(document.getElementById("min-font-size").value);
