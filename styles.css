@@ -483,7 +483,6 @@ input:checked ~ .toggle-slider:before {
         display: flex;
         justify-content: center;
         margin-top: 0px;
-        background-color: red;
         transform: scale(90%);
 
     }
