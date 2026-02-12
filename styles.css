@@ -485,6 +485,7 @@ input:checked ~ .toggle-slider:before {
         margin-top: 0px;
         transform: scale(90%);
     }
+    
     #create-button, #reset-button, #print-button{
         width: 50%;
         aspect-ratio: 1/1;
