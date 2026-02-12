@@ -408,7 +408,7 @@ input:checked ~ .toggle-slider:before {
         right: 70px;
         transform: translate(0%, 0%);
         width: calc(100vw - 90px);
-        height: calc(100vh - 90px);
+        height: calc(100dvh - 90px);
     }
     #description.show{
         display: block;
