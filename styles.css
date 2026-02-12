@@ -350,14 +350,10 @@ input:checked ~ .toggle-slider:before {
         left: auto;
         bottom: 20px;
         right: 20px;
-        background-image: url(../Project-1-Interaction-Draft-2/HelpIcon.png);
     }
     #about-icon:hover{
         /* transform: rotate(180deg); */
         transform: scale(110%);
-    }
-    #about-icon.closed{
-        background-image: url(../Project-1-Interaction-Draft-2/CloseIcon.png);
     }
     #about{
         border-radius: 30px 30px 5px 30px;
@@ -370,14 +366,10 @@ input:checked ~ .toggle-slider:before {
         right: 70px;
         bottom: 20px;
         font-size: 18px;
-        display: none;
         z-index: 1999
     }
     #about ol{
         margin: 30px 30px 30px 10px;
-    }
-    #about.hide{
-        display: block !important;
     }
     #learn-more{
         margin: 0;
