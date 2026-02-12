@@ -6,9 +6,12 @@
 
 let about = document.getElementById("about");
 let aboutIcon = document.getElementById("about-icon");
+let learnMoreMobile = document.getElementById("learn-more-mobile");
+let descriptionCloseMobile = document.getElementById("close-description-mobile");
 aboutIcon.addEventListener("click", () => {
     about.classList.toggle("hide");
     aboutIcon.classList.toggle("closed");
+    learnMoreMobile.classList.toggle("show");
 });
 
 let control = document.getElementById("control");
@@ -19,17 +22,20 @@ controlIcon.addEventListener("click", () => {
 });
 
 let learnMore = document.getElementById("learn-more");
-let learnMoreMobile = document.getElementById("learn-more-mobile");
 let descriptionClose = document.getElementById("close-description");
 let description = document.getElementById("description");
 learnMore.addEventListener("click", () => {
     description.classList.add("show");
 });
 learnMoreMobile.addEventListener("click", () => {
-    description.classList.add("show");
+    description.classList.add("show");descriptionCloseMobile.classList.add("show");
 });
 descriptionClose.addEventListener("click", () => {
     description.classList.remove("show");
+});
+descriptionCloseMobile.addEventListener("click", () => {
+    description.classList.remove("show");
+    descriptionCloseMobile.classList.remove("show");
 });
 
 
