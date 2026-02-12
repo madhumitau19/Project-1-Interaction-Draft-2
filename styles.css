@@ -364,7 +364,7 @@ input:checked ~ .toggle-slider:before {
     #about{
         border-radius: 30px 30px 5px 30px;
         width: calc(100vw - 90px);
-        height: 45vh;
+        height: 30vh;
         max-height: 50vh;
         position: fixed;
         top: auto;
@@ -386,6 +386,7 @@ input:checked ~ .toggle-slider:before {
         position: fixed;
         right: -60px;
         bottom: 150px;
+        z-index: 1999;
     }
     #learn-more:hover{
         transform: scale(90%);
@@ -443,8 +444,8 @@ input:checked ~ .toggle-slider:before {
     }
     #control{
         width: calc(100vw - 90px);
-        height: calc(50vh - 20px);
-        max-height: 50vh;
+        height: calc(65vh - 20px);
+        max-height: 80vh;
         top: 20px;
         right: 70px;
         padding: 30px;
@@ -478,6 +479,9 @@ input:checked ~ .toggle-slider:before {
     }
     #reset-button{
         margin-right: 10px
+    }
+    .toggle input {
+        display: none !important;
     }
 
 }
