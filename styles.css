@@ -343,7 +343,8 @@ input:checked ~ .toggle-slider:before {
 }
 
 #texts{
-    overflow: clip;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 .word{
@@ -352,7 +353,7 @@ input:checked ~ .toggle-slider:before {
   text-transform: uppercase;
   padding: 20px;
 }
-#raleigh{
+#raleigh, #marlowe{
     max-width: 100vw;
     height: 100vh;
 }
