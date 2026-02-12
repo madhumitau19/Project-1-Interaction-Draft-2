@@ -48,7 +48,7 @@ body {
     position: fixed;
     mix-blend-mode: overlay;
     pointer-events: none;
-    z-index: 2000;
+    z-index: 3000;
     overflow: hidden;
 }
 #overlay img{
@@ -350,52 +350,57 @@ input:checked ~ .toggle-slider:before {
         left: auto;
         bottom: 20px;
         right: 20px;
+        background-image: url(../Project-1-Interaction-Draft-2/HelpIcon.png);
     }
     #about-icon:hover{
         /* transform: rotate(180deg); */
         transform: scale(110%);
     }
     #about-icon.closed{
-        background-image: url(../Project-1-Interaction-Draft-2/HelpIcon.png);
+        background-image: url(../Project-1-Interaction-Draft-2/CloseIcon.png);
     }
     #about{
         border-radius: 30px 30px 5px 30px;
         width: calc(100vw - 90px);
         height: 30vh;
-        max-height: 50vh;
+        max-height: 30vh;
         position: fixed;
         top: auto;
         left: auto;
         right: 70px;
         bottom: 20px;
         font-size: 18px;
+        display: none;
+        z-index: 1999
     }
     #about ol{
         margin: 30px 30px 30px 10px;
     }
     #about.hide{
-        display: none !important;
+        display: block !important;
     }
     #learn-more{
         margin: 0;
         width: 200px;
         transform: rotate(90deg);
         position: fixed;
-        right: -80px;
-        bottom: 150dvh;
-        z-index: 1999;
+        right: -60px;
+        bottom: 150px;
+        z-index: 2000;
     }
     #learn-more:hover{
-        transform: scale(90%);
+        transform: rotate(90deg);
     }
 
     #description{
         position: fixed;
-        top: 50vh;
-        left: 50vw;
-        transform: translate(-50%, -50%);
-        display: none; 
-        z-index: 1999;
+        top: 70px;
+        left: auto;
+        right: 70px;
+        transform: translate(0%, 0%);
+        width: calc(100vw - 90px);
+        height: calc(100vh);
+
     }
     #description.show{
         display: flex;
@@ -415,16 +420,11 @@ input:checked ~ .toggle-slider:before {
     #close-description{
         width: 40px;
         height: 40px;
-        margin-right: 5px;
-        cursor: pointer;
-        z-index: 1999;
-        transition: transform 0.3s ease-in-out;
-        transform: rotate(0deg);
-        background-color: #a95530;
-        border: solid 1px rgb(32, 18, 7);
-        border-radius: 5px 5px 5px 5px;
-        display: flex;
-        align-items: center;
+        margin-right: 0px;
+        position: fixed;
+        z-index: 2000;
+        top: 70px;
+        right: 20px;
     }
     #close-description img{
         max-width: 100%;
@@ -447,6 +447,7 @@ input:checked ~ .toggle-slider:before {
         right: 70px;
         padding: 30px;
         font-size: 16px;
+        z-index: 1998
     }
     #min-font-size-display, #max-font-size-display{
         display: inline-block;
