@@ -7,10 +7,20 @@
     #about, #control, #about-icon, #control-icon{
         display: none !important;
     }
+    
+    html, body {
+        width: 8.5in;
+        height: 11in;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+    }
+    
      @page {
         size: letter;
         margin: 0;
     }
+    
     #raleigh, #marlowe {
         width: 8.5in;
         height: 11in;
@@ -18,27 +28,24 @@
         top: 0;
         left: 0;
     }
+    
     #overlay {
         position: absolute;
-        width: 8.5in !important;
-        height: 11in !important;
-        max-width: 8.5in !important;
-        max-height: 11in !important;
+        width: 8.5in;
+        height: 11in;
         top: 0;
         left: 0;
-        overflow: visible;
-        mix-blend-mode: overlay;
+        overflow: visible;  /* Change from hidden */
+        pointer-events: none;
+        z-index: 3000;
     }
+    
     #overlay img {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 8.5in !important;
-        height: 11in !important;
-        min-width: 8.5in !important;
-        min-height: 11in !important;
-        max-width: 8.5in !important;
+        width: 8.5in;
+        height: 11in;
         object-fit: cover;
+        object-position: top left;
     }
 }
 
