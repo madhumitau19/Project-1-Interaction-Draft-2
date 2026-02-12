@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 @media print{
-    #about, #control, #about-icon, #control-icon{
+    #about, #control, #about-icon, #control-icon, #loading, #learn-more-mobile, #close-description-mobile{
         display: none !important;
     }
     
@@ -27,15 +27,16 @@
     }
     
     #overlay {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
+        position: absolute;
+        width: 8.5in;
+        height: 22in;
+        top: 50%;
         left: 0;
         right: 0;
         bottom: 0;
         pointer-events: none;
         z-index: 3000;
+        overflow: visible;
     }
     
     #overlay img {
