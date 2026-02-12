@@ -451,7 +451,7 @@ input:checked ~ .toggle-slider:before {
         max-height: 65vh;
         top: 20px;
         right: 70px;
-        padding: 30px;
+        padding: 20px;
         font-size: 16px;
         z-index: 1998
     }
@@ -475,9 +475,11 @@ input:checked ~ .toggle-slider:before {
         display: flex;
         justify-content: center;
         margin-top: 10px;
+        background-color: red;
+        transform: scale(90%);
     }
     #create-button, #reset-button, #print-button{
-        width: 40%;
+        width: 50%;
         aspect-ratio: 1/1;
         margin-left: -10px;
     }
