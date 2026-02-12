@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 @media print{
-    #about, #control, #about-icon, #control-icon{
+    #about, #control, #about-icon, #control-icon, #learn-more-mobile, #loading, #close-description-mobile, #description{
         display: none !important;
     }
      @page {
@@ -485,7 +485,7 @@ input:checked ~ .toggle-slider:before {
         margin-top: 0px;
         transform: scale(90%);
     }
-    
+
     #create-button, #reset-button, #print-button{
         width: 50%;
         aspect-ratio: 1/1;

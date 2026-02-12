@@ -249,6 +249,9 @@ function create() {
     if (getComputedStyle(description).display === "flex") {
         description.classList.remove("show");
     };
+    if (getComputedStyle(learnMoreMobile).display === "flex") {
+        learnMoreMobile.classList.add("show");
+    };
     let fontSizeMax = Number(document.getElementById("max-font-size").value);
     let fontSizeMin = Number(document.getElementById("min-font-size").value);
     if (fontSizeMax < fontSizeMin) {
