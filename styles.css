@@ -114,6 +114,9 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
+#learn-more-mobile{
+    display: none;
+}
 #learn-more:hover{
     transform: scale(90%);
 }
@@ -372,6 +375,10 @@ input:checked ~ .toggle-slider:before {
         margin: 30px 30px 30px 10px;
     }
     #learn-more{
+        display: none;
+    }
+    #learn-more-mobile{
+        position: fixed;
         margin: 0;
         width: 200px;
         transform: rotate(90deg);
@@ -379,6 +386,13 @@ input:checked ~ .toggle-slider:before {
         right: -60px;
         bottom: 150px;
         z-index: 2000;
+        border: solid 1px rgb(32, 18, 7);
+        height: 40px;
+        border-radius: 20px;
+        background-color: rgb(72, 84, 88);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     #learn-more:hover{
         transform: rotate(90deg);

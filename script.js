@@ -19,9 +19,13 @@ controlIcon.addEventListener("click", () => {
 });
 
 let learnMore = document.getElementById("learn-more");
+let learnMoreMobile = document.getElementById("learn-more-mobile");
 let descriptionClose = document.getElementById("close-description");
 let description = document.getElementById("description");
 learnMore.addEventListener("click", () => {
+    description.classList.add("show");
+});
+learnMoreMobile.addEventListener("click", () => {
     description.classList.add("show");
 });
 descriptionClose.addEventListener("click", () => {
