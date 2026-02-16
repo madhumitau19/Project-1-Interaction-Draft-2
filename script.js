@@ -54,12 +54,14 @@ let minFontSize = document.getElementById("min-font-size");
 document.getElementById("min-font-size-display").innerHTML = `${minFontSize.value}`;
 minFontSize.addEventListener("input", () => {
   document.getElementById("min-font-size-display").innerHTML = `${minFontSize.value}`;
+  document.getElementById("min-font-size-example").style.fontSize = `${minFontSize.value}px`;
 });
 
 let maxFontSize = document.getElementById("max-font-size");
 document.getElementById("max-font-size-display").innerHTML = `${maxFontSize.value}`;
 maxFontSize.addEventListener("input", () => {
   document.getElementById("max-font-size-display").innerHTML = `${maxFontSize.value}`;
+  document.getElementById("max-font-size-example").style.fontSize = `${maxFontSize.value}px`;
 });
 
 function setFontSize(){
@@ -251,7 +253,7 @@ function create() {
         word.style.transitionDelay = '0s';
         word.style.opacity = 0;
     });
-    
+
     if (getComputedStyle(about).display === "block"){
         about.classList.add("hide");
         aboutIcon.classList.add("closed");
