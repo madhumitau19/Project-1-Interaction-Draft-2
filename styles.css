@@ -143,6 +143,13 @@ body {
 #about ol{
     margin: 30px 30px 30px 10px;
 }
+#about ol li{
+    margin-top: 10px;
+}
+li img{
+    width: 60px;
+    height: 60px;
+}
 #about.hide{
     display: none !important;
 }
@@ -295,7 +302,7 @@ body {
   bottom: 0;
   transition: 0.4s;
   border-radius: 34px;
-  background-color: rgb(59, 41, 26);
+  background-color: rgb(131, 112, 97);
 }
 
 .toggle-slider:before {
@@ -305,7 +312,7 @@ body {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: #b29b7b;
+  background-color: #9d9383;
   transition: 0.4s;
   border-radius: 50%;
 }
@@ -319,7 +326,7 @@ input:checked ~ .toggle-slider:before {
 #min-font-size, #max-font-size{
   display: inline;
   -webkit-appearance: none;
-  width: 200px;
+  width: 150px;
   height: 0px;
   border-radius: 100%;
   margin: 10px 0px;
@@ -346,13 +353,22 @@ input:checked ~ .toggle-slider:before {
     width: 80px;
     height: 80px;
     cursor: pointer;
+}
+#create-button img, #reset-button img, #print-button img{
     transition: transform 0.3s ease-in-out;
 }
-#create-button:hover, #reset-button:hover, #print-button:hover{
+#create-button img:hover, #reset-button img:hover, #print-button img:hover{
     transform: rotate(180deg);
 }
 #create-button img, #reset-button img, #print-button img{
     width: 100%;
+}
+#create-button p, #reset-button p, #print-button p{
+    text-align: center;
+    font-size: 12px;
+}
+#reset-button p{
+    margin-left: 10px;
 }
 #reset-button{
     margin-left: -10px;
@@ -393,7 +409,7 @@ input:checked ~ .toggle-slider:before {
 
 /* mobile */
 
-@media screen and (max-width: 431px) {
+@media screen and (max-width: 500px) {
     
     html, body {
         overflow-x: hidden;
@@ -512,13 +528,16 @@ input:checked ~ .toggle-slider:before {
         font-size: 16px;
         z-index: 1998
     }
+    label, #rotation-label, #color-label{
+        font-size: 14px;
+    }
     #min-font-size-display, #max-font-size-display{
         display: inline-block;
         margin-bottom: 5px;
     }
     #min-font-size::-webkit-slider-thumb, #max-font-size::-webkit-slider-thumb {
-        width: 14px;
-        height: 14px;
+        width: 18px;
+        height: 18px;
     }
     .toggle{
         margin-bottom: 5px;
