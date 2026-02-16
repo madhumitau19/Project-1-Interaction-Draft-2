@@ -242,6 +242,16 @@ let loading = document.getElementById("loading");
 let createButton= document.getElementById('create-button');
 
 function create() {
+    document.body.classList.remove("easter-egg");
+    document.documentElement.classList.remove("easter-egg");
+    document.getElementById("texts").style.height = '100vh';
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    words.forEach(word => {
+        word.style.transitionDelay = '0s';
+        word.style.opacity = 0;
+    });
+    
     if (getComputedStyle(about).display === "block"){
         about.classList.add("hide");
         aboutIcon.classList.add("closed");
