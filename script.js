@@ -258,6 +258,10 @@ function create() {
         about.classList.add("hide");
         aboutIcon.classList.add("closed");
     };
+    if (getComputedStyle(control).display === "block"){
+        control.classList.add("hide");
+        controlIcon.classList.add("closed");
+    };
     if (getComputedStyle(description).display === "flex") {
         description.classList.remove("show");
     };
@@ -292,7 +296,10 @@ function create() {
         setTimeout(() => {
             loading.innerHTML = "COMPLETED!"}, 6540);
         setTimeout(() => {
-            loading.style.display = "none"}, 7540);
+            loading.style.display = "none";
+            control.classList.remove("hide");
+            controlIcon.classList.remove("closed")}, 7540);
+            ;
         }
 };
 
