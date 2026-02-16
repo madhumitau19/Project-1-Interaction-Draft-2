@@ -3,6 +3,12 @@
     padding: none;
     box-sizing: border-box;
 }
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 @media print{
     #about, #control, #about-icon, #control-icon, #loading, #learn-more-mobile, #close-description-mobile{
         display: none !important;
@@ -13,17 +19,13 @@
         margin: 0;
     }
     
-    body {
-        width: 100%;
-        height: 100%;
+    html, body {
+        height: auto;
+        overflow: visible;
     }
-    
-    #raleigh, #marlowe {
-        width: 8.5in;
-        height: 11in;
-        position: absolute;
-        top: 0;
-        left: 0;
+    #texts {
+        height: auto;
+        overflow: visible;
     }
     
     #overlay {
@@ -86,7 +88,7 @@ body {
 #overlay img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    overflow: hidden;
 }
 
 #about-icon{
@@ -347,8 +349,10 @@ input:checked ~ .toggle-slider:before {
 }
 
 #texts{
-    overflow: hidden;
     pointer-events: none;
+    overflow: clip;
+    height: 100vh;
+    width: 100vw;
 }
 
 .word{
