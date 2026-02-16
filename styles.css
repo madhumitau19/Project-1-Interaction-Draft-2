@@ -8,6 +8,16 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
+html.easter-egg body #texts {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+html.easter-egg,
+html.easter-egg body {
+    overflow-y: scroll !important;
+    height: auto !important;
+}
 
 @media print{
     #about, #control, #about-icon, #control-icon, #loading, #learn-more-mobile, #close-description-mobile{

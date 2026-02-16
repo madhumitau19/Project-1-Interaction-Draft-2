@@ -289,12 +289,26 @@ createButton.addEventListener("click", create);
 
 
 let resetButton= document.getElementById('reset-button');
+// resetButton.addEventListener("click", () => {
+//     document.body.classList.remove("easter-egg");
+//     document.documentElement.classList.remove("easter-egg");
+//   words.forEach(word => {
+//     word.style.transitionDelay = '0s';
+//     word.style.opacity= 0;
+//   });
+//   loading.style.display = "none";
+// });
+
 resetButton.addEventListener("click", () => {
-  words.forEach(word => {
-    word.style.transitionDelay = '0s';
-    word.style.opacity= 0;
-  });
-  loading.style.display = "none";
+    document.body.classList.remove("easter-egg");
+    document.documentElement.classList.remove("easter-egg");
+    document.getElementById("texts").style.height = '100vh';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    words.forEach(word => {
+        word.style.transitionDelay = '0s';
+        word.style.opacity = 0;
+    });
+    loading.style.display = "none";
 });
 
 let printButton= document.getElementById("print-button");
@@ -304,30 +318,56 @@ printButton.addEventListener("click", () => {
 
 //easter egg bruh
 
+// function easterEgg() {
+//     document.body.classList.add("easter-egg");
+//     document.documentElement.classList.add("easter-egg");
+//     if (getComputedStyle(control).display === "block"){
+//         control.classList.add("hide");
+//         controlIcon.classList.add("closed");
+//     };
+//     let t=0;
+//     let l=0;
+//     let direction = 1;
+    
+//     words.forEach(word => {
+//         word.style.top = `calc(100px + ${t}%)`;
+//         word.style.left = `calc(30px + ${l}%)`;
+//         word.style.opacity = 1;
+
+//         t += 2;
+//         l += direction;
+        
+//         if(l >= 85){
+//             direction = -1;
+//             }
+        
+
+//         if(l < 0){
+//             direction = 1;
+//             }
+//         }
+//   );
+// }
+
 function easterEgg() {
-    if (getComputedStyle(control).display === "block"){
-        control.classList.add("hide");
-        controlIcon.classList.add("closed");
-    };
-    let t=0;
-    let l=0;
+    document.body.classList.add("easter-egg");
+    document.documentElement.classList.add("easter-egg");
+    
+    let t = 10;
+    let l = 0;
     let direction = 1;
+    
+    // Set texts height to fit all words
+    const totalWords = words.length;
+    document.getElementById("texts").style.height = `${totalWords * 3}vh`;
+    
     words.forEach(word => {
-        word.style.top = `calc(100px + ${t}%)`;
+        word.style.top = `${t}vh`;
         word.style.left = `calc(30px + ${l}%)`;
         word.style.opacity = 1;
-
-        t += 2;
+        t += 3;
         l += direction;
-        
-        if(l >= 85){
-            direction = -1;
-            }
-        
-
-        if(l < 0){
-            direction = 1;
-            }
-        }
-  );
+        if (l >= 85) direction = -1;
+        if (l < 0) direction = 1;
+    });
 }
