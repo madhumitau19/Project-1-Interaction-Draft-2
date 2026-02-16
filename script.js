@@ -386,7 +386,7 @@ function easterEgg() {
         word.style.opacity = 1;
         t += 3;
         l += direction;
-        if (l >= 70) direction = -1;
+        if (l >= 60) direction = -1;
         if (l < 0) direction = 1;
     });
 }
