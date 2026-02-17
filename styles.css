@@ -425,6 +425,185 @@ input:checked ~ .toggle-slider:before {
     left: 70PX; 
 }
 
+/* stuff in the middle */
+@media screen and (min-width: 500px ) and (max-width: 700px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    #about-icon{
+        position: fixed;
+        top: auto;
+        left: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+    #about-icon:hover{
+        /* transform: rotate(180deg); */
+        transform: scale(110%);
+    }
+    #about{
+        border-radius: 30px 30px 5px 30px;
+        width: calc(100vw - 90px);
+        height: 30dvh;
+        max-height: 30dvh;
+        position: fixed;
+        top: auto;
+        left: auto;
+        right: 70px;
+        bottom: 20px;
+        font-size: 18px;
+        z-index: 1999
+    }
+    #about ol{
+        margin: 30px 30px 30px 10px;
+    }
+    #learn-more{
+        display: none;
+    }
+    #learn-more-mobile{
+        position: fixed;
+        margin: 0;
+        width: 200px;
+        transform: rotate(90deg);
+        position: fixed;
+        right: -60px;
+        bottom: 150px;
+        z-index: 2000;
+        border: solid 1px rgb(32, 18, 7);
+        height: 40px;
+        border-radius: 20px;
+        background-color: rgb(72, 84, 88);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #learn-more-mobile.show{
+        display: none;
+    }
+
+    #description{
+        position: fixed;
+        top: 70px;
+        left: auto;
+        right: 70px;
+        transform: translate(0%, 0%);
+        width: calc(100vw - 90px);
+        height: calc(100dvh - 90px);
+    }
+    #description.show{
+        display: block;
+    }
+    #description-content{
+        width: calc(100vw - 90px);
+        max-height: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        border: solid 1px rgb(32, 18, 7);
+        background-color: rgb(179, 149, 111);
+        padding: 30px;
+        font-size: 20px;
+        border-radius: 30px 5px 5px 30px;
+        margin-bottom: 0px;
+    }
+    #close-description{
+        display: none;
+    }
+    #close-description-mobile{
+        width: 40px;
+        height: 40px;
+        background-color: #a95530;
+        border: solid 1px rgb(32, 18, 7);
+        border-radius: 5px 5px 5px 5px;
+        display: none;
+        align-items: center;
+        position: fixed;
+        z-index: 2000;
+        top: 70px;
+        right: 20px;
+    }
+    #close-description-mobile.show{
+        display: flex;
+    }
+    #close-description-mobile img{
+        max-width: 100%;
+    }
+
+    #control-icon{
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    #control{
+        width: calc(100vw - 90px);
+        height: calc(65dvh - 20px);
+        max-height: 65dvh;
+        top: 20px;
+        right: 70px;
+        padding: 20px;
+        font-size: 16px;
+        z-index: 1998
+    }
+    label, #rotation-label, #color-label{
+        font-size: 14px;
+    }
+    #min-font-size-display, #max-font-size-display{
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+    #min-font-size::-webkit-slider-thumb, #max-font-size::-webkit-slider-thumb {
+        width: 18px;
+        height: 18px;
+    }
+    .toggle{
+        margin-bottom: 5px;
+        margin-top: 0px;
+    }
+    #rotation-label, #color-label{
+        margin-bottom: 5px;
+    }
+
+    #control-buttons{
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+        transform: scale(90%);
+    }
+
+    #create-button, #reset-button, #print-button{
+        width: 20%;
+        aspect-ratio: 1/1;
+        margin-left: -10px;
+    }
+    #reset-button{
+        margin-right: 10px
+    }
+    .toggle input {
+        display: none !important;
+    }
+
+    #loading{
+        width: calc(100vw - 90px);
+        height: 40px;
+        border-radius: 30px 5px 5px 30px; 
+        position: fixed;
+        top: auto;
+        left: auto;
+        bottom: 20px;
+        right: 70px; 
+    }
+
+    #min-font-size-example, #max-font-size-example{
+        right: 5px;
+    }
+    #min-font-size-example{
+        top: 20px;
+    }
+    #max-font-size-example{
+        top: 85px;
+    }
+}
+
 /* mobile */
 
 @media screen and (max-width: 500px) {
