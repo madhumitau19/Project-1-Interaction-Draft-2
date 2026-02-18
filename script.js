@@ -6,12 +6,9 @@
 
 let about = document.getElementById("about");
 let aboutIcon = document.getElementById("about-icon");
-let learnMoreMobile = document.getElementById("learn-more-mobile");
-let descriptionCloseMobile = document.getElementById("close-description-mobile");
 aboutIcon.addEventListener("click", () => {
     about.classList.toggle("hide");
     aboutIcon.classList.toggle("closed");
-    learnMoreMobile.classList.toggle("show");
 });
 
 let control = document.getElementById("control");
@@ -19,23 +16,6 @@ let controlIcon = document.getElementById("control-icon");
 controlIcon.addEventListener("click", () => {
     control.classList.toggle("hide");
     controlIcon.classList.toggle("closed");
-});
-
-let learnMore = document.getElementById("learn-more");
-let descriptionClose = document.getElementById("close-description");
-let description = document.getElementById("description");
-learnMore.addEventListener("click", () => {
-    description.classList.add("show");
-});
-learnMoreMobile.addEventListener("click", () => {
-    description.classList.add("show");descriptionCloseMobile.classList.add("show");
-});
-descriptionClose.addEventListener("click", () => {
-    description.classList.remove("show");
-});
-descriptionCloseMobile.addEventListener("click", () => {
-    description.classList.remove("show");
-    descriptionCloseMobile.classList.remove("show");
 });
 
 
@@ -82,43 +62,6 @@ function checkOverlap(rect1, rect2, padding = 20) {
            rect1.top > rect2.bottom + padding);
 }
 
-// function setPositions() {
-//   positions.length = 0; // Clear previous positions
-  
-//   words.forEach(word => {
-//     let placed = false;
-//     let attempts = 0;
-//     const maxAttempts = 100;
-    
-//     while (!placed && attempts < maxAttempts) {
-//         const wordWidth = word.offsetWidth;
-//         const wordHeight = word.offsetHeight;
-
-//         const maxLeft = window.innerWidth - wordWidth;
-//         const maxTop = window.innerHeight - wordHeight;
-
-//         let top = getRandomNum(0, maxTop);
-//         let left = getRandomNum(0, maxLeft);
-        
-//         word.style.top = `${top}px`;
-//         word.style.left = `${left}px`;
-//         word.style.opacity = 1;
-        
-//         const rect = word.getBoundingClientRect();
-        
-//         // Check if overlaps with any existing word
-//         const overlaps = positions.some(pos => checkOverlap(rect, pos));
-        
-//         if (!overlaps || attempts === maxAttempts - 1) {
-//             positions.push(rect);
-//             placed = true;
-//         }
-        
-//         attempts++;
-//         }
-//     });
-// }
-
 function setPositions() {
   positions.length = 0;
   
@@ -140,7 +83,6 @@ function setPositions() {
       word.style.top = `${top}%`;
       word.style.left = `${left}%`;
 
-      // Force clamp on mobile
       if (window.innerWidth <= 431) {
         const rect = word.getBoundingClientRect();
         if (rect.right > window.innerWidth) {
@@ -194,9 +136,7 @@ function checkForRotation(){
             word.style.transform = 'rotate(0deg)';
         });
     }
-}
-
-
+};
 
 function setTransition(){
   const words = document.querySelectorAll(".word");
@@ -234,9 +174,8 @@ function setColor() {
                 marloweWord.style.color = '#2c2c2c';
             })
         });
-    }
-
-}
+    };
+};
 
 let loading = document.getElementById("loading");
 
@@ -262,12 +201,7 @@ function create() {
         control.classList.add("hide");
         controlIcon.classList.add("closed");
     };
-    if (getComputedStyle(description).display === "flex") {
-        description.classList.remove("show");
-    };
-    if (getComputedStyle(learnMoreMobile).display === "flex") {
-        learnMoreMobile.classList.add("show");
-    };
+
     let fontSizeMax = Number(document.getElementById("max-font-size").value);
     let fontSizeMin = Number(document.getElementById("min-font-size").value);
     if (fontSizeMax < fontSizeMin) {
@@ -336,37 +270,6 @@ printButton.addEventListener("click", () => {
 });
 
 //easter egg bruh
-
-// function easterEgg() {
-//     document.body.classList.add("easter-egg");
-//     document.documentElement.classList.add("easter-egg");
-//     if (getComputedStyle(control).display === "block"){
-//         control.classList.add("hide");
-//         controlIcon.classList.add("closed");
-//     };
-//     let t=0;
-//     let l=0;
-//     let direction = 1;
-    
-//     words.forEach(word => {
-//         word.style.top = `calc(100px + ${t}%)`;
-//         word.style.left = `calc(30px + ${l}%)`;
-//         word.style.opacity = 1;
-
-//         t += 2;
-//         l += direction;
-        
-//         if(l >= 85){
-//             direction = -1;
-//             }
-        
-
-//         if(l < 0){
-//             direction = 1;
-//             }
-//         }
-//   );
-// }
 
 function easterEgg() {
     document.body.classList.add("easter-egg");
