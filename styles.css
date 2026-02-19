@@ -138,7 +138,6 @@ body {
     display: none;
     
     z-index: 1998;
-    overflow-y: scroll;
     font-size: 20px;
     text-align: left;
 }
@@ -421,7 +420,8 @@ input:checked ~ .toggle-slider:before {
         right: 70px;
         bottom: 20px;
         font-size: 18px;
-        z-index: 1999
+        z-index: 1999;
+        overflow-y: scroll;
     }
     #about ol{
         margin: 30px 30px 30px 10px;
@@ -556,7 +556,8 @@ input:checked ~ .toggle-slider:before {
         right: 70px;
         bottom: 20px;
         font-size: 18px;
-        z-index: 1999
+        z-index: 1999;
+        overflow-y: scroll;
     }
     #about ol{
         margin: 30px 30px 30px 10px;
