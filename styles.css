@@ -33,15 +33,37 @@ html.easter-egg body {
         height: auto;
         overflow: visible;
     }
-    #texts {
+
+    #print-page {
+        position: relative;
+        width: 100%;
         height: auto;
         overflow: visible;
     }
+
+    /* edits */
+    #texts {
+        height: 100vh;      /* keep same size as screen so positions match */
+        width: 100vw;
+        overflow: visible;
+        position: relative;
+    }
+
+    #raleigh, #marlowe {
+        height: 100vh;
+        max-width: 100vw;
+    }
+
+    .word {
+        position: absolute !important;
+        opacity: 1 !important;   /* force visible — browser sometimes resets this */
+    }
+    /* edits */
     
     #overlay {
         position: absolute;
         width: 8.5in;
-        height: 22in;
+        height: 11in;
         top: 50%;
         left: 0;
         right: 0;
