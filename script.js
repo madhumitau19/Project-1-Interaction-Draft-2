@@ -264,9 +264,14 @@ resetButton.addEventListener("click", () => {
     loading.style.display = "none";
 });
 
-let printButton= document.getElementById("print-button");
+let printButton = document.getElementById("print-button");
 printButton.addEventListener("click", () => {
-    window.print();
+    words.forEach(word => {
+        word.style.setProperty('opacity', '1', 'important');
+    });
+    setTimeout(() => {
+        window.print();
+    }, 100);
 });
 
 //easter egg bruh

@@ -19,69 +19,50 @@ html.easter-egg body {
     height: auto !important;
 }
 
-@media print{
-    #about, #control, #about-icon, #control-icon, #loading, #about-page{
+@media print {
+    #about, #control, #about-icon, #control-icon, #loading, #about-page, #print-canvas-container {
         display: none !important;
     }
-    
+
     @page {
         size: letter;
         margin: 0;
     }
-    
+
     html, body {
-        height: auto;
+        height: 100vh;
         overflow: visible;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
-    #print-page {
-        position: relative;
-        width: 100%;
-        height: auto;
-        overflow: visible;
-    }
-
-    /* edits */
-    #texts {
-        height: 100vh;      /* keep same size as screen so positions match */
+    #print-page, #texts, #raleigh, #marlowe {
+        height: 100vh;
         width: 100vw;
         overflow: visible;
-        position: relative;
-    }
-
-    #raleigh, #marlowe {
-        height: 100vh;
-        max-width: 100vw;
     }
 
     .word {
         position: absolute !important;
-        opacity: 1 !important;   /* force visible — browser sometimes resets this */
+        opacity: 1 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
-    /* edits */
-    
+
     #overlay {
-        position: absolute;
-        width: 8.5in;
-        height: 11in;
-        top: 50%;
+        position: fixed;
+        top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        pointer-events: none;
-        z-index: 3000;
-        overflow: visible;
+        width: 100vw;
+        height: 100vh;
+        mix-blend-mode: normal !important;
+        z-index: -1 !important;
     }
-    
+
     #overlay img {
-        position: absolute;
         width: 100%;
         height: 100%;
-        min-width: 100%;
-        min-height: 100%;
         object-fit: cover;
-        object-position: 0 0;
-        mix-blend-mode: overlay;
     }
 }
 
